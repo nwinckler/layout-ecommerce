@@ -1,0 +1,135 @@
+*{
+    margin:0;
+    padding:0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/* Grid */
+.grid-container{
+    display:grid;
+    grid-template-areas:
+    "header header header"
+    "nav nav nav"
+    "aside main main"
+    "footer footer footer"
+    ;
+    height: 100vh;
+    grid-template-rows: 6% 3% 1fr 5%;
+    grid-template-columns: 15% 1fr;
+}
+
+/* Header */
+
+.grid-item-header{
+    grid-area: header;
+    background-color: #1b4498;
+    color:white;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem 0 2rem;
+}
+
+.usuario{
+    display: flex;
+    justify-content: center;
+    column-gap: 0.5rem;
+}
+
+.boton{
+    cursor:pointer;
+}
+
+/* Navbar */
+
+.grid-item-nav{
+    grid-area: nav;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #262626;
+    color: #bfbfbf;
+}
+
+
+/* Categorías */
+
+.grid-item-aside{
+    grid-area: aside;
+    background-color: #93b0ec;
+    color:#262626;
+    padding:1rem;
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    row-gap: 0.5rem;
+}
+
+.categoria{
+    display:flex;
+    flex-wrap: wrap;
+    gap: 0.2rem;
+    cursor: pointer;
+}
+
+.cantidad{
+    color:midnightblue;
+}
+
+/* Productos */
+
+.grid-item-main{
+    padding: 2rem;
+    grid-area: main;
+    background-color: #f1f1f1;
+    color:#262626;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 2rem;
+}
+
+.producto{
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+}
+
+.producto img{
+    width:15rem;
+    height: 15rem;
+}
+
+.descripcion{
+    padding: 0 1rem 0 1rem;
+}
+
+
+.precio{
+    font-size: large;
+    color:#1b4498;
+    font-weight: bold;
+}
+
+button{
+    cursor:pointer;
+    margin-top: 1rem;
+    width: 100%;
+    background-color: #1b4498;
+    color: white;
+    height: 2rem;
+}
+
+/* Footer */
+footer{
+    background-color: #262626;
+    color: #bfbfbf;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid-item-footer{
+    grid-area: footer;
+}
